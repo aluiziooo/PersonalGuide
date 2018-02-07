@@ -1,0 +1,71 @@
+<!--
+  Generated template for the ListasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Listas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="Filmes">
+        Filmes
+      </ion-segment-button>
+      <ion-segment-button value="Series">
+        Series
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'Filmes'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/filmes/avatar.jpeg">
+        </ion-thumbnail>
+        <h2>Avatar</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/filmes/fast.jpeg">
+        </ion-thumbnail>
+        <h2>Velozes e furiosos</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/filmes/massacre.jpeg">
+        </ion-thumbnail>
+        <h2>Massacre da Serra</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Series'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/series/alteredcarbon.jpeg">
+        </ion-thumbnail>
+        <h2>Altered Carbon</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/series/darevil.jpeg">
+        </ion-thumbnail>
+        <h2>Darevil</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/series/flash.jpeg">
+        </ion-thumbnail>
+        <h2>Flash</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
